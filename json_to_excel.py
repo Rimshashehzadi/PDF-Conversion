@@ -1,11 +1,7 @@
-from json2excel import Json2Excel
+import pandas as pd #type: ignore
 
-if __name__ == '__main__':
-    json2excel = Json2Excel(head_name_cols=["rank", "name"])
-    # print(json2excel.run('./test.json'))
-
-    jsons = [
-       {
+# Sample JSON data
+data = {
   "document": {
     "@pageCount": "2",
     "@pageCountWithOCRPerformed": "0",
@@ -5181,5 +5177,9 @@ if __name__ == '__main__':
     ]
   }
 }
-    ]
-    print(json2excel.run(jsons))
+
+# Convert JSON data to a pandas DataFrame
+df = pd.DataFrame(data)
+
+# Save the DataFrame to an Excel file
+df.to_excel("output.xlsx", index=False)
