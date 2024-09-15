@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "product-service"
+name = "app"
 version = "0.1.0"
 description = ""
 authors = ["rimsha_shehzadi <rimshashehzadi79@gmail.com>"]
@@ -8,8 +8,8 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 fastapi = "^0.114.2"
-uvicorn = "^0.30.6"
 sqlmodel = "^0.0.22"
+uvicorn = "^0.30.6"
 
 
 [build-system]
